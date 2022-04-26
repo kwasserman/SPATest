@@ -1,3 +1,7 @@
+global using Serilog;
+using SpaBL;
+using SpaDl;
+using Model;
 var builder = WebApplication.CreateBuilder(args);
 
 // Add services to the container.
@@ -12,6 +16,7 @@ var configuration = new ConfigurationBuilder()
     .SetBasePath(Directory.GetCurrentDirectory())
     .AddJsonFile("appsettings.json")
     .Build();
+    
 
 var app = builder.Build();
 
